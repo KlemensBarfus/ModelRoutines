@@ -1,5 +1,6 @@
 def AtmModel_get_times(time):
   import datetime
+  import numpy as np
   # gets a dictionary with times for ERA-Interim dataset
   # input is the variable as one get's it by 'time = f.variables['time']'
   # written by K.Barfus 2/2019
@@ -21,7 +22,7 @@ def AtmModel_get_times(time):
   n_times = len(time_var)
   dates = []
   for i_times in range(0, n_times):
-    d_time = datetime.timedelta(hours=time_var[i_times])
+    d_time = datetime.timedelta(hours=np.asscalar(time_var[i_times]))
     rec_date = ref_date + d_time
     dates.append(rec_date)
   return dates
