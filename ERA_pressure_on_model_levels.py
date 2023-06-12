@@ -34,7 +34,7 @@ def ERA_pressure_on_model_levels(ps, hyam, hybm, hyai, hybi):
   if(ndim == 0):
     press_mid_level = np.squeeze(press_mid_level)
     press_half_level = np.squeeze(press_half_level) 
-  if(ndim == 2)
+  if(ndim == 2):
     press_mid_level = np.squeeze(press_mid_level[0,:,:])
     press_half_level = np.squeeze(press_half_level[0,:,:])
 
